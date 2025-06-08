@@ -1,17 +1,44 @@
 @startuml
-participant Participant as Foo
-actor Actor as Foo1
-boundary Boundary as Foo2
-control Control as Foo3
-entity  Entity as Foo4
-database Database as Foo5
-collections Collections as Foo6
-queue Queue as Foo7
-Foo -> Foo1 : To actor
-Foo -> Foo2 : To boundary
-Foo -> Foo3 : To control
-Foo -> Foo4 : To entity
-Foo -> Foo5 : To database
-Foo -> Foo6 : To collections
-Foo -> Foo7 : To queue
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam defaultTextAlignment center
+
+actor Пользователь
+
+package "Фронтенд" {
+  [React UI] as UI
+}
+
+package "Бэкенд" {
+  [FastAPI] as API
+  [Аутентификация (OAuth2 + RBAC)] as Auth
+  [Логирование] as Log
+}
+
+package "Хранилище данных" {
+  [База данных PostgreSQL] as DB
+  [Аналитика ClickHouse] as Analytics
+}
+
+package "Внешние системы" {
+  [ERP-система] as ERP
+  [CRM-система] as CRM
+  [Система заказов] as Orders
+}
+
+rectangle "Кластер Kubernetes" as K8s {
+  UI -down-> API : REST API
+  API --> DB : ORM / SQL
+  API --> Analytics : Поток данных
+  API --> ERP : Интеграция
+  API --> CRM : Интеграция
+  API --> Orders : Интеграция
+  API --> Auth : Авторизация и доступ
+  API --> Log : Логирование событий
+}
+
+K8s --> DB : Деплой и масштабирование
+K8s --> Analytics : Деплой и масштабирование
+
 @enduml
