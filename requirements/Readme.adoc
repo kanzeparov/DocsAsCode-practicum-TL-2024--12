@@ -94,33 +94,33 @@
 === Декомпозиция задач
 
 *Общий бэклог всех задач:*
-image::../images/board-tasks-all.png[Описание всех задач]
+image:../images/board-tasks-all.png[Описание всех задач]
 
 *Декомпозиция задач системного анализа:*
-image::../images/board-tasks-sa.png[Задачи отдела системной аналитики]
+image:../images/board-tasks-sa.png[Задачи отдела системной аналитики]
 
 *Эпики проекта:*
-image::../images/epic.png[Основные эпики проекта]
+image:../images/epic.png[Основные эпики проекта]
 
 *Подробное распределение задач на первые спринты:*
-image::../images/sprint1.png[Распределение задач на спринт 1]
-image::../images/sprint2.png[Распределение задач на спринт 2]
+image:../images/sprint1.png[Распределение задач на спринт 1]
+image:../images/sprint2.png[Распределение задач на спринт 2]
 
 *Дополнительные задачи в беклоге:*
-image::../images/tasks.png[Бэклог дополнительных задач]
+image:../images/tasks.png[Бэклог дополнительных задач]
 
 === Группы и аккаунты
 
 *Группы для разных отделов на проекте:*
-image::../images/group.png[Группы по отделам]
+image:../images/group.png[Группы по отделам]
 
 *Заведённые аккаунты сотрудников:*
-image::../images/sotrudnik.png[Аккаунты сотрудников]
+image:../images/sotrudnik.png[Аккаунты сотрудников]
 
 === Диаграмма Ганта
 
 *Подробная диаграмма Ганта по задачам системной аналитики:*
-image::../images/roadmap.png[Roadmap]
+image:../images/roadmap.png[Roadmap]
 
 === MVP
 
