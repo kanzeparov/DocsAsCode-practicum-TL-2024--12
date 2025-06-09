@@ -120,7 +120,7 @@ image:../images/sotrudnik.png[Аккаунты сотрудников]
 === Диаграмма Ганта
 
 *Подробная диаграмма Ганта по задачам системной аналитики:*
-image:../images/roadmap.png[Диаграмма Ганта]
+image:../images/roadmap-gant.png[Диаграмма Ганта]
 
 === MVP
 
