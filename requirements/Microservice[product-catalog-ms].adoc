@@ -28,7 +28,7 @@
 |===
 
 == Контракт 
-link:api/product.yaml[product.yaml]
+link:../api/product.yaml[product.yaml]
 
 == Архитектура работы сервиса
 
