@@ -13,21 +13,6 @@
 - Рассылка событий в очереди для других систем
 - Валидация данных при заведении нового продукта
 
-## Структура репозитория
-
-.
-├── api/
-│ └── product.yaml # OpenAPI спецификация для product-catalog-ms
-├── diagrams/
-│ ├── arch_nft.puml # Архитектурная диаграмма (PlantUML)
-│ └── sequence.puml # Диаграмма последовательности (PlantUML)
-├── images/
-│ └── ... # Изображения схем, скриншотов и архитектуры
-├── requirements/
-│ ├── Microservice[product-catalog-ms].adoc # Подробное техническое задание (AsciiDoc)
-│ └── Readme.adoc # Основная проектная документация AsciiDoc
-├── README.md # Этот файл
-
 markdown
 Kopieren
 Bearbeiten

@@ -136,7 +136,7 @@ image::images/roadmap.png[Roadmap]
 === MVP
 
 Презентация MVP проекта:  
-https://www.slidespilot.com/s/p/4mMJG21l0P
+https://docs.google.com/presentation/d/1SSWKq_Yl_OA1AKX8uzsW40ehhUd_AAoBrgdzZjdqj78/edit?usp=sharing
 
 ---
 
@@ -372,7 +372,7 @@ https://app.diagrams.net/#G1YIO_JzwDrkun-iFeaTOC8ZrdtvSyakcw#%7B%22pageId%22%3A%
 
 == Итоговая презентация
 
-https://www.slidespilot.com/presentations/preview/e6wxEmWVQ2
+https://docs.google.com/presentation/d/1hh4JrkIUIAPpeVN2l8Mfo-71hrAaJSurFMnfydomJ0E/edit?usp=sharing
 
 :end:
 
