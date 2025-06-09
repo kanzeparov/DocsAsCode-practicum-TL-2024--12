@@ -94,7 +94,7 @@
 === Декомпозиция задач
 
 *Общий бэклог всех задач:*
-image:../images/board-tasks-all.png[Описание всех задач]
+image:../images/board-all.png[Описание всех задач]
 
 *Декомпозиция задач системного анализа:*
 image:../images/board-tasks-sa.png[Задачи отдела системной аналитики]
@@ -120,7 +120,7 @@ image:../images/sotrudnik.png[Аккаунты сотрудников]
 === Диаграмма Ганта
 
 *Подробная диаграмма Ганта по задачам системной аналитики:*
-image:../images/roadmap.png[Roadmap]
+image:../images/roadmap.png[Диаграмма Ганта]
 
 === MVP
 
