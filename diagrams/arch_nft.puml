@@ -1,0 +1,44 @@
+@startuml
+title Упрощённая архитектура сети закусочных с учётом НФТ
+
+package "Клиенты" {
+  [Веб-интерфейс] as Web
+  [Мобильное приложение] as Mobile
+}
+
+package "Основные сервисы" {
+  [Аутентификация] as Auth
+  [Онлайн-заказы] as Orders
+  [Аналитика (BI)] as BI
+}
+
+package "Инфраструктура" {
+  [Логирование и мониторинг] as Logging
+  [База данных] as DB
+  [Резервное копирование] as Backup
+}
+
+Web --> Auth
+Web --> Orders
+Web --> BI
+
+Mobile --> Auth
+Mobile --> Orders
+Mobile --> BI
+
+Auth --> Logging
+Orders --> Logging
+BI --> Logging
+
+Auth --> DB
+Orders --> DB
+BI --> DB
+
+DB --> Backup
+
+' НФТ (через dotted arrows)
+BI ..> "Тесты нагрузки\nШифрование данных\nМасштабируемость" : 
+Auth ..> "MFA\nАудит входов" : 
+Logging ..> "Централизованный сбор логов\nАлерты по SLA" : 
+
+@enduml

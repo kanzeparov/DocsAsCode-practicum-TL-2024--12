@@ -1,0 +1,137 @@
+openapi: 3.0.3
+info:
+  title: Product Catalog API
+  description: API для управления продуктами сети закусочных "Замысловатость"
+  version: "1.0.0"
+
+servers:
+  - url: https://api.zamyslovatost.com/v1
+
+paths:
+  /products:
+    post:
+      summary: Создать новый продукт
+      operationId: createProduct
+      tags: [products]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductCreateRequest'
+      responses:
+        '201':
+          description: Продукт успешно создан
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductResponse'
+        '400':
+          description: Некорректные параметры запроса
+        '401':
+          description: Требуется авторизация
+    get:
+      summary: Получить список продуктов
+      operationId: listProducts
+      tags: [products]
+      parameters:
+        - in: query
+          name: category
+          schema:
+            type: string
+          description: Фильтр по категории
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 20
+          description: Количество элементов
+        - in: query
+          name: offset
+          schema:
+            type: integer
+            default: 0
+          description: Смещение для пагинации
+      responses:
+        '200':
+          description: Список продуктов
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductResponse'
+
+components:
+  schemas:
+    ProductCreateRequest:
+      type: object
+      required: [name, category, price, ingredients]
+      properties:
+        name:
+          type: string
+          description: Название продукта
+        category:
+          type: string
+          description: Категория
+        description:
+          type: string
+          description: Описание
+        price:
+          type: number
+          format: float
+          description: Цена в кредитах
+        ingredients:
+          type: array
+          items:
+            type: string
+          description: Список ингредиентов
+        imageUrl:
+          type: string
+          format: uri
+          description: Ссылка на фото
+
+    ProductUpdateRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+          format: float
+        category:
+          type: string
+        ingredients:
+          type: array
+          items:
+            type: string
+        imageUrl:
+          type: string
+          format: uri
+
+    ProductResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        category:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+        ingredients:
+          type: array
+          items:
+            type: string
+        imageUrl:
+          type: string
+        isActive:
+          type: boolean
+
+security:
+  - bearerAuth: []
